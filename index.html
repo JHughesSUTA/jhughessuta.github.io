@@ -29,6 +29,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Javascript source -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -110,6 +114,82 @@
         </div>
     </section>
 
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- javascript test Section -->
+
+    <div id="container" style="width:100%; height:600px;"></div>
+    <script>
+    Highcharts.chart('container', {
+    chart: {
+        type: 'area',
+        inverted: true
+    },
+    title: {
+        text: 'Average percipitation in each month'
+    },
+    subtitle: {
+        style: {
+            position: 'absolute',
+            right: '0px',
+            bottom: '10px'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -150,
+        y: 100,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+    },
+    xAxis: {
+        categories: [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December'
+        ]
+    },
+    yAxis: {
+        title: {
+            text: 'Number of inches'
+        },
+        labels: {
+            formatter: function () {
+                return this.value;
+            }
+        },
+        min: 0
+    },
+    plotOptions: {
+        area: {
+            fillOpacity: 0.5
+        }
+    },
+    series: [{
+        name: 'Rain',
+        data: [1, 1, 3, 10, 9, 11, 12, 6, 8, 13, 6, 4]
+    }, {
+        name: 'Snow',
+        data: [20, 21, 14, 4, 0, 0, 0, 0, 0, 0, 2, 12]
+    }]
+});
+    </script>
+
+
+
     <!-- Contact Section -->
     <section id="contact" class="container content-section text-center">
         <div class="row">
@@ -137,8 +217,6 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
