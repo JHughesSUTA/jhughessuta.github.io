@@ -29,7 +29,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-block d-lg-none"></span>
         <span class="d-none d-lg-block">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
         </span>
@@ -86,7 +86,7 @@
                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
-            </li> -->
+            </li>
             <li class="list-inline-item">
               <a href="https://www.linkedin.com/in/jhughessuta/" target="_blank">
                 <span class="fa-stack fa-lg">
@@ -235,6 +235,12 @@
             <li class="list-inline-item">
               <i class="devicons devicons-react"></i>
             </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-angular"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-nodejs"></i>
+            </li>
             <!-- <li class="list-inline-item">
               <i class="devicons devicons-grunt"></i>
             </li>
@@ -278,9 +284,23 @@
           <div>
             <h3 class="mb-0">Jazz Keyboard Practice Tools</h3>
             <br>
-            <a href="https://scale-degree-practice-tool.herokuapp.com/" target="_blank">
-              <img src="img/scale-degree-tool.jpg" width="120px" height="200px">
-            </a>
+            <div class="image__container">
+              <a href="https://scale-degree-practice-tool.herokuapp.com/" target="_blank">
+                <img src="img/scale-degree-tool.jpg" class="thumbnail">
+                <div class="image__overlay">
+                  <p class="image__description">Scale Degree Practice Tool</p>
+                </div>
+              </a>
+            </div>
+            <div class="image__container">
+              <a href="https://chord-practice-tool.herokuapp.com/" target="_blank">
+                <img src="img/chord-practice-tool.jpg" class="thumbnail">
+                <div class="image__overlay">
+                  <p class="image__description">Chord Practice Tool</p>
+                </div>
+              </a>
+            </div>
+            
             <br>
             <br>
             <p>I built this application for my own use - but I also wanted to build something using CSS Grid. The whole application was built using only HTML, CSS and Vanilla JS. The application is currently responsive for medium-larger monitors and smartphones. I will be making an update for macbook/laptop size screens soon!</p>
@@ -291,9 +311,16 @@
           </div>
             <h3 class="mb-0">Menu Manager</h3>
             <br>
-            <a href="https://intense-river-33906.herokuapp.com//" target="_blank">
-              <img src="img/menu-app.png" width="200px" height="140px">
-            </a>
+            <div class="image__container">
+              <a href="https://intense-river-33906.herokuapp.com//" target="_blank">
+                <img src="img/menu-app.png" width="200px" height="140px" class="thumbnail">
+                <div class="image__overlay">
+                  <div class="image__title"></div>
+                  <p class="image__description">Menu Manager</p>
+                </div>
+              </a>
+            </div>
+            
             <br>
             <br>
             <p>I built this menu manager application with Ruby on Rails. I used the Materialize CSS framework for the front end, though the focus of the application was the back-end functionality. The app was the result of a coding challenge in which I was tasked with building a menu management sofware for a small restaurant. With this application, an admin user is able to enter, edit, and remove menu items. A general user can view the menu with items grouped by category, put items into their cart, adjust the quantities of their order, and see the total cost before submitting the order.
