@@ -27,11 +27,11 @@
 
   <body id="page-top">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" aria-label="Main navigation">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none"></span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="James Hughes headshot">
         </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,10 +43,10 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#skills">Skills & Certifications</a>
@@ -64,20 +64,17 @@
       </div>
     </nav>
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" >
 
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" style="max-width: 1200px;" id="about">
         <div class="my-auto">
           <h1 class="mb-0">James
             <span class="text-primary">Hughes</span>
           </h1>
-          <div class="subheading mb-5">Chicago, IL · (616) 990-5262 ·
+          <div class="subheading mb-5">Chicago, IL ·
             <a href="mailto:james.a.hughes@gmail.com">james.a.hughes@gmail.com</a>
           </div>
-          <p class="mb-5">After deciding on a career change in 2017, I enrolled in a coding bootcamp where I learned to be a full-stack developer. Since then, I've spent several years doing development on the ServiceNow platform as well as more web-based development using various technologies. Most recently - I was building a Node/Angular app at VCPI. I always enjoy branching out and learning new languages and technologies, though I find that I am most passionate about frontend web development - as it allows me to combine my logical and creative sides. I hope to continue sharpening my skills on Angular - or with another JavaScript library at my next role!
-          <br>
-          <br>
-          When I'm not coding, I generally spend my free time practicing jazz piano, composing/arranging music, playing video games, doing photography, hiking, cooking, trying out new restaurants and taking my dog Banjo everywhere I go.</p>
+          <p class="mb-5" style="max-width: 640px;"><span style="display: block;margin-bottom: 1rem;">Hi, I'm james!</span> I'm a detail-oriented Frontend Developer with 5+ years of experience building responsive, accessible, and user-friendly web interfaces. Proven ability to collaborate with design and product teams, improve site performance, and solve complex UI problems. Passionate about clean code, accessibility, and continuous improvement.</p>
           <ul class="list-inline list-social-icons mb-0">
               <!-- <li class="list-inline-item">
               <a href="#">
@@ -88,7 +85,7 @@
               </a>
             </li> -->
             <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/jhughessuta/" target="_blank">
+              <a href="https://www.linkedin.com/in/jhughessuta/" aria-label="LinkedIn Profile" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -96,7 +93,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://github.com/JHughesSUTA" target="_blank">
+              <a href="https://github.com/JHughesSUTA" aria-label="Github Profile" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -104,36 +101,93 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://medium.com/@james.a.hughes" target="_blank">
+              <a href="https://medium.com/@james.a.hughes" aria-label="Blog" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
-            <li class="list-inline-item">
+            <!-- <li class="list-inline-item">
               <a href="https://www.instagram.com/jhughessuta/" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
 
+      <!-- PROJECTS -->
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" style="max-width: 1200px;" id="projects">
+        <div class="my-auto">
+          <h2 class="mb-5">Projects</h2>
+          <div>
+            <p>Both of these websites were built from Frontend Mentor designs and showcase my ability to translate Figma or XD files into clean, responsive, pixel-perfect interfaces with a strong focus on ADA and WCAG compliance.</p>
+            <h3 class="mb-0 mt-5">Sunnyside Agency Website</h3>
+            <div class="image__container">
+              <a href="https://jhughessuta.github.io/sunnyside-agency-landing-page/" target="_blank">
+                <img src="img/sunnyside-agency.jpg" class="thumbnail">
+                <div class="image__overlay">
+                  <p class="image__description">Sunnyside Agency Website</p>
+                </div>
+              </a>
+            </div>
+            <a href="https://github.com/JHughesSUTA/sunnyside-agency-landing-page" target="_blank" class="github_link" style="font-size:.8em;font-weight:bold;text-transform: uppercase;">See the code on github!</a>
+            <h3 class="mb-0 mt-5">Modern Art Gallery Website</h3>
+            <div class="image__container">
+              <a href="https://jhughessuta.github.io/art-gallery-website/" target="_blank">
+                <img src="img/art-gallery.jpg" class="thumbnail">
+                <div class="image__overlay">
+                  <p class="image__description">Modern Art Gallery Website</p>
+                </div>
+              </a>
+            </div>
+            <a href="https://github.com/JHughesSUTA/art-gallery-website" target="_blank" class="github_link" style="font-size:.8em;font-weight:bold;">SEE THE CODE ON GITHUB!</a>
+          </div>
+        </div>
+      </section>
+
       <!-- RESUME -->
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" style="max-width: 1200px;" id="experience">
         <div class="my-auto">
           <h2 class="mb-5">Experience</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Frontend Developer</h3>
+              <div class="subheading mb-3">Listrak</div>
+              <p>
+                Listrak is a digital marketing platform that helps brands engage with customers through email, SMS, and cross-channel automation. It specializes in personalized marketing campaigns, customer insights, and eCommerce solutions to drive revenue and retention.
+              </p>
+              <ul>
+                <li>Translated Figma and Adobe XD designs into high-quality code, ensuring pixel-perfect implementation of visual elements
+                </li>
+                <li>Developed responsive, cross-browser compatible user interfaces using HTML5, CSS3 and JavaScript, improving page load times and user experience across desktop and mobile platforms.
+                </li>
+                <li>Improved website accessibility (ADA/WCAG compliance) through semantic HTML and ARIA roles, increasing usability for users with assistive technologies.
+                </li>
+                <li>Partnered closely with designers during design handoff phases to assess technical feasibility and streamline the design-to-development process
+                </li>
+                <li>Authored and maintained technical documentation for new frontend solutions, improving cross-team collaboration
+                </li>
+                <li>Took ownership of escalated frontend issues and high-priority tasks, delivering timely solutions to unblock team workflows and resolve user-facing problems
+                </li>
+              </ul>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2022 - 2025</span>
+            </div>
+          </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Software Developer I</h3>
               <div class="subheading mb-3">VCPI</div>
               <p>
-                VCPI is an IT company specializing in providing services for long-term and post-accute care. I was brought in as a developer to support a custom application (Identity Management System) built within ServiceNow - as well as assist with various dev requirements on our ServiceNow instance. My primary responsibilities changed about a year into the position, as we started development on a web-based standalone version of the IMS application - utilizing technologies such as Node.js, Angular, Azure and MySQL.
+                VCPI is an IT company specializing in providing services for long-term and post-accute care.
               </p>
               <ul>
                 <li>Utilized and constructed JavaScript and Powershell scripts to support an automated user management application in ServiceNow</li>
@@ -145,7 +199,7 @@
               </ul>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">August 2020 - February 2022</span>
+              <span class="text-primary">2020 - 2022</span>
             </div>
           </div>
 
@@ -165,7 +219,7 @@
               </ul>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">January 2018 - April 2020</span>
+              <span class="text-primary">2018 - 2020</span>
             </div>
           </div>
 
@@ -202,7 +256,7 @@
               </ul>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">July 2015 - December 2018</span>
+              <span class="text-primary">2015 - 2018</span>
             </div>
           </div>
 
@@ -217,7 +271,7 @@
               </ul>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">July 2013 - July 2015</span>
+              <span class="text-primary">2013 - 2015</span>
             </div>
           </div>
 
@@ -225,71 +279,8 @@
 
       </section>
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-        <div class="my-auto">
-          <h2 class="mb-5">Projects</h2>
-          <div>
-            <h3 class="mb-0">Jazz Keyboard Practice Tools</h3>
-            <br>
-            <div class="image__container">
-              <a href="https://scale-degree-practice-tool.herokuapp.com/" target="_blank">
-                <img src="img/scale-degree-tool.jpg" class="thumbnail">
-                <div class="image__overlay">
-                  <p class="image__description">Scale Degree Practice Tool</p>
-                </div>
-              </a>
-            </div>
-            <a href="https://github.com/JHughesSUTA/scale-degree-practice-tool" target="_blank" class="github_link" style="font-size:.8em;font-weight:bold;">SEE THE CODE ON GITHUB!</a>
-            <div class="image__container">
-              <a href="https://chord-practice-tool.herokuapp.com/" target="_blank">
-                <img src="img/chord-practice-tool.jpg" class="thumbnail">
-                <div class="image__overlay">
-                  <p class="image__description">Chord Practice Tool</p>
-                </div>
-              </a>
-            </div>
-            <a href="https://github.com/JHughesSUTA/chord-practice-tool" target="_blank" class="github_link" style="font-size:.8em;font-weight:bold;">SEE THE CODE ON GITHUB!</a>
-            
-            <br>
-            <br>
-            <p>What do you do when there are no existing apps to help you accomplish your goals in practicing jazz keyboard voicings? You build it yourself!</p>
-            <p>That's exactly what I did in building these practice tools. Both applications were built using only HTML, CSS and Vanilla JS. My coding objective was to use css grid for the layout - which was new to me at the time.</p>
-            <p>For the non-musician it is difficult to understand what these apps accomplish, and would require a face to face explanation -- but the scale degree tool for example is a practice tool that flashes a random key (the letter name selections) with a random scale degree (the roman numeral selections). These two random selections tell the user a specific chord they need to play before the next one flashes. They can start at a very slow tempo, and gradually bump the tempo up as the drill becomes easier.The goal is that the user will eventually be able to play any possible combination very quickly without much thought - which is an important skill for a jazz musician. The logic only uses the selected options to randomize - so it allows the user to start in a comfortable spot and slowly add to build into mastering the exercise</p>
-            <p>The Chord Practice Tool is very similar - however the goal is to practice specific chords in a flash - rather than basing it off of scale degree</p>
-            <p>I can honestly say that these apps helped me achieve exponential growth in my musicianship - and my teacher has even recommended them to some of his other students! The fact that I built them myself is something I'm very proud of!</p>
-            <br>
-            <br>
-          </div>
-            <h3 class="mb-0">Menu Manager</h3>
-            <br>
-            <div class="image__container">
-              <a href="https://intense-river-33906.herokuapp.com//" target="_blank">
-                <img src="img/menu-app.png" width="200px" height="140px" class="thumbnail">
-                <div class="image__overlay">
-                  <div class="image__title"></div>
-                  <p class="image__description">Menu Manager</p>
-                </div>
-              </a>
-            </div>
-            <a href="https://github.com/JHughesSUTA/menu-app" target="_blank" class="github_link" style="font-size:.8em;font-weight:bold;">SEE THE CODE ON GITHUB!</a>
-            
-            <br>
-            <br>
-            <p>I built this menu manager application over the course of a few days with Ruby on Rails. This was the first app I built after graduating from Actualize Coding Bootcamp in 2017, and is the result of a coding challenge in which I was tasked with building a menu management application for a small restaurant. I used the Materialize CSS framework for the front end, though the focus of the application was the back-end functionality. With this application, an admin user is able to enter, edit, and remove menu items. A general user can view the menu with items grouped by category, put items into their cart, adjust the quantities of their order, and see the total cost before submitting the order.
-            <br>
-            <br>
-            The ability to edit menu items is restricted to admin users, and admins also have the ability to create different menus for lunch and dinner that have different, but also overlapping items.
-            <br>
-            <br>
-            Feel free to register to test the ordering functionality of the application as a general user. You are not able to register for an admin account however, to edit the menu.
-          </p>
-          <div>
-          </div>
-        </div>
-      </section>
 
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" style="max-width: 1200px;" id="skills">
         <div class="my-auto">
           <h2 class="mb-5">Skills & Certifications</h2>
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
@@ -309,9 +300,9 @@
             <li class="list-inline-item">
               <i class="devicons devicons-jquery"></i>
             </li>
-            <!-- <li class="list-inline-item">
+            <li class="list-inline-item">
               <i class="devicons devicons-sass"></i>
-            </li> -->
+            </li>
             <li class="list-inline-item">
               <i class="devicons devicons-bootstrap"></i>
             </li>
@@ -329,10 +320,10 @@
             </li>
             <li class="list-inline-item">
               <i class="devicons devicons-gulp"></i>
-            </li>
+            </li> -->
             <li class="list-inline-item">
               <i class="devicons devicons-npm"></i>
-            </li> -->
+            </li>
           </ul>
           <div class="subheading mb-3">ServiceNow Certifications
           </div>
