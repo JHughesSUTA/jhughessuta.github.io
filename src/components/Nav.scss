@@ -1,0 +1,159 @@
+@use "../assets/styles/variables" as *;
+@use "../assets/styles/mixins";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  font-family: $primary;
+  background-color: white;
+  z-index: 100;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  #mobile-menu {
+    &.mobile-menu--closed {
+      display: none;
+      pointer-events: none;
+    }
+
+    &.mobile-menu--open {
+      display: block;
+    }
+
+    .nav__links--mobile {
+      a {
+        position: relative;
+        
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background-color: #fff;
+          transition: all 0.5s;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger-react {
+    &:focus-visible {
+      outline: 4px solid #ff21c0 !important;
+    }
+  }
+
+  &__links--desktop {
+    display: flex;
+
+    li {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+        padding: 0;
+        margin: 0 30px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background-color: #000;
+          transition: all 0.5s;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__dark-mode-button {
+    border: none;
+    background: none;
+  }
+
+  &__right {
+    display: flex;
+
+    .hamburger-react {
+      display: none;
+    }
+  }
+}
+
+.dark {
+  .nav {
+    &__links--desktop {
+      li {
+        a {
+          &::before {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    position: relative;
+    #mobile-menu {
+      background-color: black;
+      // color: white;
+      display: block;
+      position: fixed;
+      height: 100vh;
+      width: 260px;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      padding-left: 20px;
+
+      &.mobile-menu--closed {
+        display: block;
+      }
+
+      li {
+        list-style-type: none;
+        margin-top: 50px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    &__links--desktop {
+      display: none;
+    }
+
+    &__right {
+      .hamburger-react {
+        display: inline-block;
+      }
+    }
+  }
+}

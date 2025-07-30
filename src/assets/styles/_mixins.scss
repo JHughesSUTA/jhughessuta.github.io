@@ -1,0 +1,12 @@
+@use "./variables" as *;
+@use "sass:map";
+
+@mixin theme($theme) {
+  background: map.get($theme, primary);
+  color: map.get($theme, secondary);
+
+  button {
+    background: map.get($theme, button-bg);
+    color: map.get($theme, button-text);
+  }
+}

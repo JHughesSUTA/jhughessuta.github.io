@@ -1,0 +1,78 @@
+@use "./variables" as *;
+@use "./mixins" as mixins;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  // outline: 1px solid black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*:focus-visible {
+  outline: 4px solid #ff21c0;
+}
+
+// html,
+body {
+  overflow-x: hidden;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: $primary;
+
+  @include mixins.theme($light-theme); // Default
+
+  // User prefers dark mode
+  @media (prefers-color-scheme: dark) {
+    @include mixins.theme($dark-theme);
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+dialog[open] {
+  max-width: 100%;
+  margin: revert;
+  padding: revert;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
