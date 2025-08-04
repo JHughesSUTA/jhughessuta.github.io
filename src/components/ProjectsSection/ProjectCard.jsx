@@ -2,6 +2,7 @@ import { IoMdOpen } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import Tag from "./Tag";
 import { useEffect, useRef } from "react";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const ProjectCard = ({
   title,
@@ -12,6 +13,8 @@ const ProjectCard = ({
   tags,
 }) => {
   const cardRef = useRef(null);
+
+  const { theme } = useTheme();
 
   useEffect(() => {
     const updateTabIndex = () => {
@@ -75,22 +78,35 @@ const ProjectCard = ({
     <article ref={cardRef} className="card__article">
       <img src={image} alt="image" className="card__img" />
 
-      <div className="card__data">
+      <div
+        className="card__data"
+        style={{ backgroundColor: theme === "light" ? "#fff" : "#22272e" }}
+      >
         <div>
-          <h3 className="card__title">{title}</h3>
+          <h3
+            className="card__title"
+            style={{ color: theme === "light" ? "#000" : "#fff" }}
+          >
+            {title}
+          </h3>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
             {tags.map((tag, index) => (
               <Tag key={index} text={tag} />
             ))}
           </div>
-          <span className="card__description">{description}</span>
+          <p
+            className="card__description"
+            style={{ opacity: "0.6", color: theme === "light" ? "#000" : "#fff" }}
+          >
+            {description}
+          </p>
         </div>
         <div style={{ display: "flex" }}>
           <a href={liveUrl} className="card__button" target="_blank">
-            <IoMdOpen size="30px" />
+            <IoMdOpen size="30px" color={theme === "light" ? "#000" : "#fff"} />
           </a>
           <a href={githubUrl} className="card__button" target="_blank">
-            <FaGithub size="30px" />
+            <FaGithub size="30px" color={theme === "light" ? "#000" : "#fff"} />
           </a>
         </div>
       </div>

@@ -377,8 +377,12 @@
       .card__data {
         width: 260px;
         left: 10px;
-        padding: 1rem 1.5rem;
+        padding: 1rem;
         text-wrap: balance;
+      }
+
+      .card__description {
+        margin-top: 10px;
       }
     }
   }

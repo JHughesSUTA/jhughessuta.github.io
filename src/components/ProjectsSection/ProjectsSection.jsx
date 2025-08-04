@@ -2,6 +2,8 @@ import "./ProjectSection.scss";
 import artGalleryImage from "../../assets/images/art-gallery-screenshot.jpg";
 import sunnysideImage from "../../assets/images/sunnyside-screenshot.jpg";
 import ticTacToeImage from "../../assets/images/tictactoe-screenshot.jpg";
+import dictionaryLightImage from "../../assets/images/dictionary-app-screenshot-light.jpg";
+import dictionaryDarkImage from "../../assets/images/dictionary-app-screenshot-dark.jpg";
 import studentFilterImage from "../../assets/images/student-filter-screenshot.jpg";
 import ProjectCard from "./ProjectCard";
 import Marquee from "./Marquee";
@@ -11,45 +13,55 @@ import Slider from "react-slick";
 import DecryptedText from "./DecryptedText";
 import { useTheme } from "../../contexts/ThemeContext";
 
-const cards = [
-  {
-    title: "Tic-Tac-Toe",
-    description: "Pick your mark and keep score vs the CPU or another player.",
-    image: ticTacToeImage,
-    liveUrl: "https://jhughessuta.github.io/tic-tac-toe-25/",
-    githubUrl: "https://github.com/JHughesSUTA/tic-tac-toe-25",
-    tags: ["React", "TypeScript", "Scss"],
-  },
-  {
-    title: "Modern Art Gallery Website",
-    description: "Design from frontendmentor.io. Built using CSS grid.",
-    image: artGalleryImage,
-    liveUrl: "https://jhughessuta.github.io/art-gallery-website/",
-    githubUrl: "https://github.com/JHughesSUTA/art-gallery-website",
-    tags: ["HTML", "Scss", "JavaScript"],
-  },
-  {
-    title: "Sunnyside Agency Landing Page",
-    description:
-      "Design from frontendmentor.io. Animations on scroll using only CSS and minimal JS.",
-    image: sunnysideImage,
-    liveUrl: "https://jhughessuta.github.io/sunnyside-agency-landing-page/",
-    githubUrl: "https://github.com/JHughesSUTA/sunnyside-agency-landing-page",
-    tags: ["HTML", "Scss", "JavaScript"],
-  },
-  {
-    title: "Student Grades",
-    description:
-      "Filter through students and see their grade info. Add a custom tags.",
-    image: studentFilterImage,
-    liveUrl: "https://jhughessuta.github.io/demo-students-filter/",
-    githubUrl: "https://github.com/JHughesSUTA/demo-students-filter",
-    tags: ["React", "TypeScript", "Scss"],
-  },
-];
-
 const ProjectsSection = () => {
   const { theme } = useTheme();
+
+  const cards = [
+    {
+      title: "Dictionary App",
+      description:
+        "Built using Dictionary API. See definitions, hear pronunciations, and change themes",
+      image: theme === "light" ? dictionaryLightImage : dictionaryDarkImage,
+      liveUrl: "https://jhughessuta.github.io/dictionary-app/",
+      githubUrl: "https://github.com/JHughesSUTA/dictionary-app",
+      tags: ["React", "TypeScript", "Tailwind", "API"],
+    },
+    {
+      title: "Tic-Tac-Toe",
+      description:
+        "Pick your mark and keep score vs the CPU or another player.",
+      image: ticTacToeImage,
+      liveUrl: "https://jhughessuta.github.io/tic-tac-toe-25/",
+      githubUrl: "https://github.com/JHughesSUTA/tic-tac-toe-25",
+      tags: ["React", "TypeScript", "Sass"],
+    },
+    {
+      title: "Modern Art Gallery Website",
+      description: "Design from frontendmentor.io. Built using CSS grid.",
+      image: artGalleryImage,
+      liveUrl: "https://jhughessuta.github.io/art-gallery-website/",
+      githubUrl: "https://github.com/JHughesSUTA/art-gallery-website",
+      tags: ["HTML", "Sass", "JavaScript"],
+    },
+    {
+      title: "Sunnyside Agency Landing Page",
+      description:
+        "Design from frontendmentor.io. Animations on scroll using only CSS and minimal JS.",
+      image: sunnysideImage,
+      liveUrl: "https://jhughessuta.github.io/sunnyside-agency-landing-page/",
+      githubUrl: "https://github.com/JHughesSUTA/sunnyside-agency-landing-page",
+      tags: ["HTML", "Sass", "JavaScript"],
+    },
+    {
+      title: "Student Grades",
+      description:
+        "Filter through students and see their grade info. Add a custom tags.",
+      image: studentFilterImage,
+      liveUrl: "https://jhughessuta.github.io/demo-students-filter/",
+      githubUrl: "https://github.com/JHughesSUTA/demo-students-filter",
+      tags: ["React", "TypeScript", "Sass"],
+    },
+  ];
 
   var settings = {
     className: "center",

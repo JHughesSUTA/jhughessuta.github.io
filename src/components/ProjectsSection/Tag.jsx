@@ -5,8 +5,10 @@ const Tag = ({ text }) => {
       react: "#57c4dc",
       html: "#E54B20",
       css: "#653398",
-      scss: "#BF4080",
+      sass: "#BF4080",
       javascript: "#FCDC00",
+      tailwind: "#36BCFF",
+      api: "red"
     };
     return colors[text.toLowerCase()] || "black";
   };
