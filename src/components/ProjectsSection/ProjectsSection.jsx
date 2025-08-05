@@ -22,7 +22,7 @@ const ProjectsSection = () => {
       description:
         "Built using Dictionary API. See definitions, hear pronunciations, and change themes",
       image: theme === "light" ? dictionaryLightImage : dictionaryDarkImage,
-      liveUrl: "https://jhughessuta.github.io/dictionary-app/",
+      liveUrl: "https://dictionary-app-woad-alpha.vercel.app",
       githubUrl: "https://github.com/JHughesSUTA/dictionary-app",
       tags: ["React", "TypeScript", "Tailwind", "API"],
     },
