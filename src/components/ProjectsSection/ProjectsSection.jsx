@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       image: theme === "light" ? dictionaryLightImage : dictionaryDarkImage,
       liveUrl: "https://dictionary-app-woad-alpha.vercel.app",
       githubUrl: "https://github.com/JHughesSUTA/dictionary-app",
-      tags: ["React", "TypeScript", "Tailwind", "API"],
+      tags: ["React", "React Router", "TypeScript", "Tailwind", "API"],
     },
     {
       title: "Tic-Tac-Toe",
