@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/HeroSection/Hero";
 import ContactSection from "./components/ContactSection/ContactSection";

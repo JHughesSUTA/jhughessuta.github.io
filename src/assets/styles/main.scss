@@ -23,6 +23,7 @@
 // html,
 body {
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 img,
@@ -64,6 +65,7 @@ dialog[open] {
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 ::backdrop {
