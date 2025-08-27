@@ -2,115 +2,254 @@
 @use "../../assets/styles/mixins";
 
 #contact {
-  height: 100vh;
-  min-height: 693px;
+  min-height: 100vh;
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  background-image: conic-gradient(
-    from 90deg at -10% 100%,
-    #bcc1cd 0deg,
-    #bcc1cd 90deg,
-    #fff 1turn
-  );
+  padding: 2rem 0;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 20% 80%,
+        rgba(99, 102, 241, 0.03) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(139, 92, 246, 0.03) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(236, 72, 153, 0.02) 0%,
+        transparent 50%
+      );
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(99, 102, 241, 0.01) 50%,
+      transparent 70%
+    );
+    animation: shimmer 8s ease-in-out infinite;
+    pointer-events: none;
+  }
 
   .container {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(99, 102, 241, 0.05);
+
+    .dark & {
+      background: rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.1);
+    }
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     align-items: center;
+    width: 100%;
   }
 
   .form-container {
-    width: 50%;
+    order: 1;
   }
 
   .svg-container {
-    width: 40%;
-    margin-left: auto;
-    border-radius: 50% 0;
-    // padding: 50px 75px;
-    background-color: #fcfcfc;
-    height: calc(80vh);
+    order: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 500px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+      border-color: rgba(99, 102, 241, 0.15);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(0, 0, 0, 0.03),
+        transparent
+      );
+      animation: rotate 20s linear infinite;
+      opacity: 0.3;
+    }
+
+    .svg-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     svg {
-      width: 100%;
+      width: 80%;
+      height: 80%;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.05));
     }
-  }
 
-  #contact-form {
-    background-color: #f2f2f2;
-    padding: 50px;
-    border-radius: 50px;
+    .floating-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .floating-dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      opacity: 0.6;
+
+      &:first-child {
+        top: 20%;
+        left: 15%;
+      }
+
+      &:last-child {
+        top: 70%;
+        right: 20%;
+      }
+    }
   }
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(100%) translateY(100%);
+  }
+}
+
+// Tablet styles
 @media screen and (max-width: 1100px) {
   #contact {
-    .container {
-      gap: 20px;
-      .form-container {
-        flex-basis: 50%;
-        min-width: 450px;
-        flex-shrink: 0;
+    .content-wrapper {
+      gap: 3rem;
+    }
 
-        #contact-form {
-          padding: 40px;
-          h2 {
-            font-size: 32px;
-          }
-        }
-      }
-
-      .svg-container {
-        margin-left: 20px;
-        padding: 50px;
-      }
+    .svg-container {
+      height: 400px;
     }
   }
 }
 
+@media screen and (max-width: 900px) {
+  #contact {
+    .content-wrapper {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
+    }
+
+    .form-container {
+      order: 2;
+    }
+
+    .svg-container {
+      order: 1;
+      height: 300px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Mobile styles
 @media screen and (max-width: 767px) {
   #contact {
-    // padding-top: 50px
-    align-items: center;
+    padding: 1rem 0;
+    min-height: 100vh;
 
     .container {
-      display: block;
+      padding: 1rem;
+    }
 
-      .form-container {
-        width: 100%;
-        min-width: unset;
+    .content-wrapper {
+      gap: 2rem;
+      grid-template-columns: 1fr; // Ensure single column layout on mobile
+    }
 
-        #contact-form {
-          margin-left: auto;
-          margin-right: auto;
-          padding: 30px !important;
+    .svg-container {
+      display: none; // Hide envelope on mobile for better scroll snap experience
+    }
 
-          label {
-            font-size: 14px;
-          }
+    .form-container {
+      order: 1; // Ensure form comes first on mobile
+      max-width: 100%; // Allow form to take full width
+    }
+  }
+}
 
-          h2 {
-            font-size: 23px;
-          }
-        }
-      }
-
-      .svg-container {
-        display: none;
-        // width: 100%;
-        // max-height: 300px;
-        // margin-top: 25px;
-        // margin-left: 0;
-
-        // svg {
-        //   max-width: 200px;
-        // }
-      }
+// Small mobile
+@media screen and (max-width: 480px) {
+  #contact {
+    .svg-container {
+      height: 200px;
     }
   }
 }

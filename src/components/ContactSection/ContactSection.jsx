@@ -9,23 +9,34 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
+      aria-label="Contact Section"
       style={{
-        // backgroundColor: theme === "dark" && "#23272f",
         backgroundImage:
           theme === "light"
-            ? "conic-gradient(from 90deg at -10% 100%, #bcc1cd 0deg, #bcc1cd 90deg, #fff 1turn)"
-            : "conic-gradient(from 90deg at -10% 100%, #2b303b 0deg, #2b303b 90deg, #16181d 1turn)",
+            ? "radial-gradient(ellipse at top left,rgb(255, 255, 255) 0%,rgb(246, 248, 255) 25%,rgb(241, 247, 252) 50%,rgb(243, 248, 252) 75%,rgb(255, 255, 255) 100%)"
+            : "radial-gradient(ellipse at top left, #1a1f2e 0%, #1e2332 25%, #222736 50%, #1e2332 75%, #1a1f2e 100%)",
       }}
     >
       <div className="container">
-        <ContactForm />
-        <div
-          className="svg-container"
-          style={{
-            backgroundColor: theme === "light" ? "#eceef1" : "#23272f",
-          }}
-        >
-          <ContactSvg />
+        <div className="content-wrapper">
+          <ContactForm />
+          <div
+            className="svg-container"
+            aria-hidden="true"
+            style={{
+              backgroundColor:
+                theme === "light"
+                  ? "rgba(255, 255, 255, 0.05)"
+                  : "rgba(0, 0, 0, 0.1)",
+              backdropFilter: "blur(10px)",
+              border:
+                theme === "light"
+                  ? "1px solid rgba(0, 0, 0, 0.05)"
+                  : "1px solid rgba(255, 255, 255, 0.05)",
+            }}
+          >
+            <ContactSvg />
+          </div>
         </div>
       </div>
     </section>
