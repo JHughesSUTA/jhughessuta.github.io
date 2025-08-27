@@ -93,7 +93,6 @@ const ProjectsSection = () => {
       id="projects"
       className="projects"
       style={{
-        // backgroundColor: theme === "dark" && "#23272f",
         backgroundImage:
           theme === "light"
             ? "conic-gradient(from 90deg at -10% 100%, #bcc1cd 0deg, #bcc1cd 90deg, #fff 1turn)"
@@ -101,52 +100,83 @@ const ProjectsSection = () => {
       }}
     >
       <div className="container projects-container">
-        <h2 style={{ color: theme === "light" ? "#000" : "#fff" }}>
-          <DecryptedText
-            text="Demo Projects"
-            animateOn="view"
-            speed={75}
-            revealDirection="start"
-            max-iterations={10}
-            sequential={true}
-          />
-        </h2>
-        <div
-          className="carousel-container"
-          style={{
-            background:
-              theme === "dark"
-                ? "linear-gradient(145deg, rgb(66 44 75) 0%, rgb(22 53 64) 55%, rgb(49 65 1) 100%)"
-                : "linear-gradient(145deg, rgb(240, 221, 255) 0%, rgb(206, 244, 255) 55%, rgb(227, 255, 192) 100%)",
-            borderColor: theme === "dark" && "#777d82",
-          }}
-        >
-          {/* <h2>Projects</h2> */}
-          <div
-            className="card__container"
-            style={{ maxWidth: "95%", marginLeft: "auto", marginRight: "auto" }}
+        {/* Header Section */}
+        <div className="projects-header">
+          <div className="section-badge">
+            <span>Portfolio</span>
+          </div>
+          <h2 style={{ color: theme === "light" ? "#000" : "#fff" }}>
+            <DecryptedText
+              text="Featured Projects"
+              animateOn="view"
+              speed={75}
+              revealDirection="start"
+              max-iterations={10}
+              sequential={true}
+            />
+          </h2>
+          <p
+            className="section-subtitle"
+            style={{ color: theme === "light" ? "#666" : "#b0b0b0" }}
           >
-            <Slider {...settings}>
-              {cards.map((card, index) => (
-                <ProjectCard
-                  key={index}
-                  title={card.title}
-                  description={card.description}
-                  image={card.image}
-                  liveUrl={card.liveUrl}
-                  githubUrl={card.githubUrl}
-                  tags={card.tags}
-                />
-              ))}
-            </Slider>
+            A showcase of my recent work, demonstrating front-end development
+            skills and creative problem-solving
+          </p>
+        </div>
+
+        {/* Projects Carousel Section */}
+        <div className="projects-showcase">
+          <div
+            className="carousel-container"
+            style={{
+              background:
+                theme === "dark"
+                  ? "linear-gradient(145deg, rgb(66 44 75) 0%, rgb(22 53 64) 55%, rgb(49 65 1) 100%)"
+                  : "linear-gradient(145deg, rgb(240, 221, 255) 0%, rgb(206, 244, 255) 55%, rgb(227, 255, 192) 100%)",
+              borderColor: theme === "dark" && "#777d82",
+            }}
+          >
+            <div
+              className="card__container"
+              style={{
+                maxWidth: "95%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              <Slider {...settings}>
+                {cards.map((card, index) => (
+                  <ProjectCard
+                    key={index}
+                    title={card.title}
+                    description={card.description}
+                    image={card.image}
+                    liveUrl={card.liveUrl}
+                    githubUrl={card.githubUrl}
+                    tags={card.tags}
+                  />
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
 
-        <div>
-          <h3 style={{ color: theme === "light" ? "#000" : "#fff" }}>
-            My Toolset:
-          </h3>
-          <Marquee />
+        {/* Skills Section */}
+        <div className="skills-section">
+          <div className="skills-header">
+            <h3 style={{ color: theme === "light" ? "#000" : "#fff" }}>
+              Technologies & Tools
+            </h3>
+            <p
+              className="skills-subtitle"
+              style={{ color: theme === "light" ? "#666" : "#b0b0b0" }}
+            >
+              A comprehensive toolkit for modern web development
+            </p>
+          </div>
+          <div className="marquee-container">
+            <Marquee />
+          </div>
         </div>
       </div>
     </section>

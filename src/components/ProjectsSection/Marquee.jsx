@@ -1,4 +1,4 @@
-import "./Marquee.scss"
+import "./Marquee.scss";
 import htmlIcon from "../../assets/images/icons/html.png";
 import javascriptIcon from "../../assets/images/icons/javascript.png";
 import cssIcon from "../../assets/images/icons/css.png";
@@ -22,55 +22,55 @@ const Marquee = () => {
     <div className="marquee">
       <div className="wrapper">
         <div className="itemLeft item1">
-          <img src={htmlIcon} alt="HTML" width="40" height="40" />
+          <img src={htmlIcon} alt="HTML" />
         </div>
         <div className="itemLeft item2">
-          <img src={javascriptIcon} alt="JavaScript" width="40" height="40" />
+          <img src={javascriptIcon} alt="JavaScript" />
         </div>
         <div className="itemLeft item3">
-          <img src={cssIcon} alt="CSS" width="40" height="40" />
+          <img src={cssIcon} alt="CSS" />
         </div>
         <div className="itemLeft item4">
-          <img src={reactIcon} alt="React.js" width="40" height="40" />
+          <img src={reactIcon} alt="React.js" />
         </div>
         <div className="itemLeft item5">
-          <img src={angularIcon} alt="Angular.js" width="40" height="40" />
+          <img src={angularIcon} alt="Angular.js" />
         </div>
         <div className="itemLeft item6">
-          <img src={typescriptIcon} alt="TypeScript" width="40" height="40" />
+          <img src={typescriptIcon} alt="TypeScript" />
         </div>
         <div className="itemLeft item7">
-          <img src={sassIcon} alt="SASS" width="40" height="40" />
+          <img src={sassIcon} alt="SASS" />
         </div>
         <div className="itemLeft item8">
-          <img src={tailwindIcon} alt="Tailwind" width="40" height="40" />
+          <img src={tailwindIcon} alt="Tailwind" />
         </div>
         <div className="itemLeft item9">
-          <img src={jestIcon} alt="Jest" width="40" height="40" />
+          <img src={jestIcon} alt="Jest" />
         </div>
         <div className="itemLeft item10">
-          <img src={gitIcon} alt="Git" width="40" height="40" />
+          <img src={gitIcon} alt="Git" />
         </div>
         <div className="itemLeft item11">
-          <img src={nodeIcon} alt="Node.js" width="40" height="40" />
+          <img src={nodeIcon} alt="Node.js" />
         </div>
         <div className="itemLeft item12">
-          <img src={expressIcon} alt="Express" width="40" height="40" />
+          <img src={expressIcon} alt="Express" />
         </div>
         <div className="itemLeft item13">
-          <img src={mysqlIcon} alt="Adobe" width="40" height="40" />
+          <img src={mysqlIcon} alt="Adobe" />
         </div>
         <div className="itemLeft item14">
-          <img src={postgresIcon} alt="PostgreSQL" width="40" height="40" />
+          <img src={postgresIcon} alt="PostgreSQL" />
         </div>
         <div className="itemLeft item15">
-          <img src={rubyIcon} alt="Ruby" width="40" height="40" />
+          <img src={rubyIcon} alt="Ruby" />
         </div>
         <div className="itemLeft item16">
-          <img src={figmaIcon} alt="Figma" width="40" height="40" />
+          <img src={figmaIcon} alt="Figma" />
         </div>
         <div className="itemLeft item17">
-          <img src={xdIcon} alt="Adobe XD" width="40" height="40" />
+          <img src={xdIcon} alt="Adobe XD" />
         </div>
       </div>
     </div>
