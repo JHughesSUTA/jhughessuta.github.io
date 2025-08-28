@@ -113,6 +113,7 @@ const ProjectsSection = () => {
               revealDirection="start"
               max-iterations={10}
               sequential={true}
+              useOriginalCharsOnly={true}
             />
           </h2>
           <p
