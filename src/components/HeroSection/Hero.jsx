@@ -65,7 +65,7 @@ const Hero = () => {
               responsive, accessible, and user-friendly web interfaces. Proven
               ability to collaborate with design and product teams, improve site
               performance, and solve complex UI problems. Passionate about clean
-              code, accessibility, and continuous improvement.
+              code, accessibility, and continuous learning.
             </motion.p>
             <motion.ul
               initial={{ opacity: 0, y: 100, filter: "blur(10px)" }}
@@ -100,7 +100,7 @@ const Hero = () => {
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="hero__side-image"
           >
-            <source srcset={sideImageDesktop} media="(min-width: 768px)" />
+            <source srcSet={sideImageDesktop} media="(min-width: 768px)" />
             <img src={sideImageMobile} alt="" />
           </motion.picture>
         </div>

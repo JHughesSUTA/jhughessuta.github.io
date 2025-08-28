@@ -5,7 +5,6 @@ const Logo = () => {
   return (
     <svg
       width="100"
-      f
       height="100"
       viewBox="0 0 100 100"
       fill="none"
