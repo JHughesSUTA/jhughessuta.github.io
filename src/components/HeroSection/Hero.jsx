@@ -56,6 +56,9 @@ const Hero = () => {
             </h1>
 
             <motion.p
+              style={{
+                backgroundColor: theme === "light" ? "#fff" : "rgb(35, 39, 47)",
+              }}
               initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 1.25, delay: 1.75, ease: "easeOut" }}
