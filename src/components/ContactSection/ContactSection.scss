@@ -3,6 +3,7 @@
 
 #contact {
   min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   display: flex;
   align-items: center;
@@ -11,6 +12,24 @@
   scroll-snap-stop: always;
   padding: 2rem;
   overflow: hidden;
+
+  // Prevent mobile viewport issues
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+
+  // Prevent viewport changes on mobile keyboard
+  @media screen and (max-width: 767px) {
+    // Use viewport units that don't change when keyboard appears
+    height: 100vh;
+    height: 100dvh;
+
+    // Prevent layout shifts
+    transform: translateZ(0);
+
+    // Ensure proper scrolling behavior
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
   &::before {
     content: "";
@@ -264,9 +283,39 @@
   #contact {
     padding: 1rem 0;
     min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+
+    // Keep scroll snap but prevent jumping with better mobile handling
+    scroll-snap-align: start;
+
+    // Better mobile layout handling
+    align-items: flex-start;
+
+    // Prevent viewport height issues when keyboard appears
+    &::before,
+    &::after {
+      position: fixed;
+    }
+
+    // Better mobile viewport handling to prevent jumping
+    @supports (height: 100dvh) {
+      min-height: 100dvh;
+    }
+
+    // Prevent layout shifts when keyboard appears
+    @media screen and (max-height: 600px) {
+      min-height: 100vh;
+      align-items: flex-start;
+
+      .container {
+        margin-top: 0;
+        padding-top: 0.5rem;
+      }
+    }
 
     .container {
       padding: 1rem;
+      margin-top: 1rem;
     }
 
     .content-wrapper {
@@ -281,6 +330,29 @@
     .form-container {
       order: 1; // Ensure form comes first on mobile
       max-width: 100%; // Allow form to take full width
+
+      // Prevent form layout shifts on mobile
+      transform: translateZ(0); /* Force hardware acceleration */
+      will-change: auto; /* Prevent unnecessary repaints */
+
+      // Prevent mobile keyboard jumping
+      input,
+      textarea {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        transform: translateZ(0); /* Hardware acceleration */
+        // -webkit-appearance: none; /* Remove iOS styling */
+        // border-radius: 0;
+      }
+
+      // Smooth transitions to prevent jarring movements
+      transition: all 0.2s ease-out;
+
+      // Prevent viewport changes on input focus
+      input:focus,
+      textarea:focus {
+        transform: translateZ(0) scale(1);
+        // outline: none;
+      }
     }
   }
 }
