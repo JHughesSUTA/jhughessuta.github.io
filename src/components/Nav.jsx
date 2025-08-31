@@ -70,7 +70,7 @@ const Nav = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 2.5 }}
+            transition={{ duration: 3, delay: 3.5, ease: "easeOut" }}
             style={{ maxWidth: "64px" }}
           >
             <Logo />
@@ -78,7 +78,7 @@ const Nav = () => {
           <motion.ul
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 2.5 }}
+            transition={{ duration: 3, delay: 3.5, ease: "easeOut" }}
             className="nav__links--desktop"
           >
             <li>
@@ -138,11 +138,12 @@ const Nav = () => {
               </li>
             </ul>
           </motion.div>
+
           <motion.div
             className="nav__right"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 2.5 }}
+            transition={{ duration: 3, delay: 3.5, ease: "easeOut" }}
           >
             <button
               id="dark-mode-button"

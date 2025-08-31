@@ -42,14 +42,14 @@ const Hero = () => {
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
+                transition={{ duration: 0.75, ease: "easeOut" }}
               >
                 Hi,
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+                transition={{ duration: 0.75, delay: 1, ease: "easeOut" }}
               >
                 &nbsp;I'm James
               </motion.span>
@@ -58,7 +58,7 @@ const Hero = () => {
             <motion.p
               initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
+              transition={{ duration: 1.25, delay: 1.75, ease: "easeOut" }}
             >
               I'm a detail-oriented Web Developer with experience building
               responsive, accessible, and user-friendly web interfaces. Proven
@@ -68,9 +68,9 @@ const Hero = () => {
             </motion.p>
 
             <motion.ul
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 3, delay: 3.5, ease: "easeOut" }}
             >
               <li>
                 <motion.a
@@ -106,7 +106,7 @@ const Hero = () => {
           <motion.picture
             initial={{ opacity: 0, x: 100, scale: 0.8 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 1.8, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 0, ease: "easeOut" }}
             className="hero__side-image"
             whileHover={{ scale: 1.05 }}
           >
