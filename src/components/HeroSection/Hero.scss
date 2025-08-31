@@ -184,7 +184,7 @@
     &__copy {
       text-align: center;
       // position: absolute;
-      top: 60%;
+      top: 55%;
       transform: translateY(-50%);
       width: 100%;
       min-width: unset;
@@ -237,6 +237,7 @@
     @media screen and (max-height: 750px) {
       &__side-image {
         top: 2%;
+        max-width: 32%;
       }
     }
 

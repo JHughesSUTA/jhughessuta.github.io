@@ -55,7 +55,7 @@ const ProjectsSection = () => {
     {
       title: "Student Grades",
       description:
-        "Filter through students and see their grade info. Add a custom tags.",
+        "Filter through students and see their grade info. Add custom tags.",
       image: studentFilterImage,
       liveUrl: "https://jhughessuta.github.io/demo-students-filter/",
       githubUrl: "https://github.com/JHughesSUTA/demo-students-filter",
@@ -121,7 +121,7 @@ const ProjectsSection = () => {
             style={{ color: theme === "light" ? "#666" : "#b0b0b0" }}
           >
             A showcase of my recent work, demonstrating front-end development
-            skills and creative problem-solving
+            skills and attention to detail.
           </p>
         </div>
 
