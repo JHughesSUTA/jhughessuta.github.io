@@ -5,7 +5,7 @@ import ticTacToeImage from "../../assets/images/tictactoe-screenshot.jpg";
 import keyboardHarmonyImage from "../../assets/images/keyboard-harmony-screenshot.jpg";
 import dictionaryLightImage from "../../assets/images/dictionary-app-screenshot-light.jpg";
 import dictionaryDarkImage from "../../assets/images/dictionary-app-screenshot-dark.jpg";
-import studentFilterImage from "../../assets/images/student-filter-screenshot.jpg";
+// import studentFilterImage from "../../assets/images/student-filter-screenshot.jpg";
 import ProjectCard from "./ProjectCard";
 import Marquee from "./Marquee";
 import "slick-carousel/slick/slick.css";

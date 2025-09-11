@@ -114,8 +114,38 @@ const Particles = ({
       renderer.setSize(width, height);
       camera.perspective({ aspect: gl.canvas.width / gl.canvas.height });
     };
-    window.addEventListener("resize", resize, false);
+
+    // Initial resize
     resize();
+
+    // Add resize listener
+    window.addEventListener("resize", resize, false);
+
+    // Mobile viewport change detection
+    const handleViewportChange = () => {
+      // Use a small delay to ensure viewport has settled
+      setTimeout(() => {
+        resize();
+      }, 100);
+    };
+
+    // Listen for viewport changes on mobile
+    window.addEventListener("orientationchange", handleViewportChange);
+    window.addEventListener("scroll", handleViewportChange);
+
+    // Use ResizeObserver for more reliable container size detection
+    let resizeObserver;
+    if (window.ResizeObserver) {
+      resizeObserver = new ResizeObserver(() => {
+        handleViewportChange();
+      });
+      resizeObserver.observe(container);
+    }
+
+    // Also add a delayed resize for mobile initial load
+    setTimeout(() => {
+      resize();
+    }, 500);
 
     const handleMouseMove = (e) => {
       const rect = container.getBoundingClientRect();
@@ -210,6 +240,11 @@ const Particles = ({
 
     return () => {
       window.removeEventListener("resize", resize);
+      window.removeEventListener("orientationchange", handleViewportChange);
+      window.removeEventListener("scroll", handleViewportChange);
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
       if (moveParticlesOnHover) {
         container.removeEventListener("mousemove", handleMouseMove);
       }
