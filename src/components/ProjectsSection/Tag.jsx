@@ -10,6 +10,7 @@ const Tag = ({ text }) => {
       javascript: "#FCDC00",
       tailwind: "#36BCFF",
       api: "red",
+      vitest: "#acd268",
     };
     return colors[text.toLowerCase()] || "black";
   };

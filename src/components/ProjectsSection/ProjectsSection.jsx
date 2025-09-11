@@ -2,6 +2,7 @@ import "./ProjectSection.scss";
 import artGalleryImage from "../../assets/images/art-gallery-screenshot.jpg";
 import sunnysideImage from "../../assets/images/sunnyside-screenshot.jpg";
 import ticTacToeImage from "../../assets/images/tictactoe-screenshot.jpg";
+import keyboardHarmonyImage from "../../assets/images/keyboard-harmony-screenshot.jpg";
 import dictionaryLightImage from "../../assets/images/dictionary-app-screenshot-light.jpg";
 import dictionaryDarkImage from "../../assets/images/dictionary-app-screenshot-dark.jpg";
 import studentFilterImage from "../../assets/images/student-filter-screenshot.jpg";
@@ -36,6 +37,16 @@ const ProjectsSection = () => {
       tags: ["React", "TypeScript", "Sass"],
     },
     {
+      title: "Keyboard Harmony Practice Tools",
+      description:
+        "An app I built to help me practice the different voicings of Phil DeGregs Jazz Keyboard Harmony book.",
+      image: keyboardHarmonyImage,
+      liveUrl: "https://keyboard-harmony-practice-tools-v2.vercel.app/",
+      githubUrl:
+        "https://github.com/JHughesSUTA/keyboard-harmony-practice-tools-v2",
+      tags: ["React", "TypeScript", "Vitest", "Tailwind"],
+    },
+    {
       title: "Modern Art Gallery Website",
       description: "Design from frontendmentor.io. Built using CSS grid.",
       image: artGalleryImage,
@@ -52,15 +63,15 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/JHughesSUTA/sunnyside-agency-landing-page",
       tags: ["HTML", "Sass", "JavaScript"],
     },
-    {
-      title: "Student Grades",
-      description:
-        "Filter through students and see their grade info. Add custom tags.",
-      image: studentFilterImage,
-      liveUrl: "https://jhughessuta.github.io/demo-students-filter/",
-      githubUrl: "https://github.com/JHughesSUTA/demo-students-filter",
-      tags: ["React", "TypeScript", "Sass"],
-    },
+    // {
+    //   title: "Student Grades",
+    //   description:
+    //     "Filter through students and see their grade info. Add custom tags.",
+    //   image: studentFilterImage,
+    //   liveUrl: "https://jhughessuta.github.io/demo-students-filter/",
+    //   githubUrl: "https://github.com/JHughesSUTA/demo-students-filter",
+    //   tags: ["React", "TypeScript", "Sass"],
+    // },
   ];
 
   var settings = {
