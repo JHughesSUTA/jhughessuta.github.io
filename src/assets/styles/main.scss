@@ -66,6 +66,12 @@ html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overscroll-behavior: none;
+
+  // Mobile-specific scroll behavior
+  @media screen and (max-width: 767px) {
+    scroll-snap-type: y proximity; /* Less aggressive on mobile */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
 }
 
 ::backdrop {

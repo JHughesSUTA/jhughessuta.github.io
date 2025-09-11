@@ -24,6 +24,13 @@ const ContactSvg = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
+        style={{
+          display: "block",
+          width: "100%",
+          height: "auto",
+          maxWidth: "400px",
+          maxHeight: "400px",
+        }}
       >
         <title>Animated envelope with letter coming out</title>
 

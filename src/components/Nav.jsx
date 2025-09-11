@@ -43,20 +43,46 @@ const Nav = () => {
     color: theme === "light" ? "#000" : "#fff",
   };
 
-  const handleMobileLinkClick = (e, targetId) => {
+  const handleLinkClick = (e, targetId) => {
     e.preventDefault();
 
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  const handleMobileLinkClick = (e, targetId) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Close menu immediately for better UX
     setIsMenuOpen(false);
 
+    // Simple, reliable scrolling that works with scroll-snap
     setTimeout(() => {
       const element = document.getElementById(targetId);
       if (element) {
+        // Temporarily disable scroll-snap for smooth navigation
+        const html = document.documentElement;
+        const originalScrollSnap = html.style.scrollSnapType;
+
+        html.style.scrollSnapType = "none";
+
         element.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
+
+        // Re-enable scroll-snap after scrolling completes
+        setTimeout(() => {
+          html.style.scrollSnapType = originalScrollSnap;
+        }, 1000);
       }
-    }, 300);
+    }, 100); // Minimal delay for menu closing
   };
 
   return (
@@ -82,17 +108,29 @@ const Nav = () => {
             className="nav__links--desktop"
           >
             <li>
-              <a style={navLinkStyle} href="#hero">
+              <a
+                style={navLinkStyle}
+                href="#hero"
+                onClick={(e) => handleLinkClick(e, "hero")}
+              >
                 About
               </a>
             </li>
             <li>
-              <a style={navLinkStyle} href="#projects">
+              <a
+                style={navLinkStyle}
+                href="#projects"
+                onClick={(e) => handleLinkClick(e, "projects")}
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a style={navLinkStyle} href="#contact">
+              <a
+                style={navLinkStyle}
+                href="#contact"
+                onClick={(e) => handleLinkClick(e, "contact")}
+              >
                 Contact
               </a>
             </li>
