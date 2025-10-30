@@ -11,6 +11,7 @@ const Tag = ({ text }) => {
       tailwind: "#36BCFF",
       api: "red",
       vitest: "#acd268",
+      zustand: "brown",
     };
     return colors[text.toLowerCase()] || "black";
   };

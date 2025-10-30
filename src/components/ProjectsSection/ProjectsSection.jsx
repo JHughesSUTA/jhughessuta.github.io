@@ -5,6 +5,7 @@ import ticTacToeImage from "../../assets/images/tictactoe-screenshot.jpg";
 import keyboardHarmonyImage from "../../assets/images/keyboard-harmony-screenshot.jpg";
 import dictionaryLightImage from "../../assets/images/dictionary-app-screenshot-light.jpg";
 import dictionaryDarkImage from "../../assets/images/dictionary-app-screenshot-dark.jpg";
+import passwordGeneratorImage from "../../assets/images/password-generator-screenshot.jpg";
 // import studentFilterImage from "../../assets/images/student-filter-screenshot.jpg";
 import ProjectCard from "./ProjectCard";
 import Marquee from "./Marquee";
@@ -37,6 +38,15 @@ const ProjectsSection = () => {
       tags: ["React", "TypeScript", "Sass"],
     },
     {
+      title: "Password Generator",
+      description:
+        "Generate a password with several different options. See password strength.",
+      image: passwordGeneratorImage,
+      liveUrl: "https://password-generator-virid-six-62.vercel.app/",
+      githubUrl: "https://github.com/JHughesSUTA/password-generator",
+      tags: ["React", "Zustand", "TypeScript", "Tailwind"],
+    },
+    {
       title: "Keyboard Harmony Practice Tools",
       description:
         "An app I built to help me practice the different voicings of Phil DeGregs Jazz Keyboard Harmony book.",
@@ -63,15 +73,6 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/JHughesSUTA/sunnyside-agency-landing-page",
       tags: ["HTML", "Sass", "JavaScript"],
     },
-    // {
-    //   title: "Student Grades",
-    //   description:
-    //     "Filter through students and see their grade info. Add custom tags.",
-    //   image: studentFilterImage,
-    //   liveUrl: "https://jhughessuta.github.io/demo-students-filter/",
-    //   githubUrl: "https://github.com/JHughesSUTA/demo-students-filter",
-    //   tags: ["React", "TypeScript", "Sass"],
-    // },
   ];
 
   var settings = {
